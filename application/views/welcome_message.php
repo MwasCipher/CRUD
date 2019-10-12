@@ -1,197 +1,60 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
-    <script type="text/javascript"src= "<?php echo base_url('assets/js/bootstrap.bundle.min.js')?> "> </script>
-    <script type="text/javascript"src= "<?php echo base_url('assets/js/bootstrap.min.js')?>"> </script>
+<?php include_once('header.php'); ?>
 
-    <link rel="stylesheet" style="text/css" href="<?php echo base_url('assets/css/bootstrap.css')?>" >
+    <div class="container">
+        <h3>View All Posts</h3>
 
+        <?php if ($msg = $this->session->flashdata('msg')): ?>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand">CRUD With Bootstrap</a>
+            <?php echo $msg; ?>
 
-            </div>
+        <?php endif; ?>
 
-        </div>
+        <?php
 
-    </nav>
+        echo anchor('welcome/create', 'ADD POST', ['class' => 'btn btn-primary']); ?>
 
 
-    <section id="content">
-        <div class="container">
-            <!-- Default table -->
-            <div class="row">
-                <div class="span6">
-                    <h4>Default styles</h4>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>
-                                #
-                            </th>
-                            <th>
-                                First Name
-                            </th>
-                            <th>
-                                Last Name
-                            </th>
-                            <th>
-                                Username
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                1
-                            </td>
-                            <td>
-                                Mark
-                            </td>
-                            <td>
-                                Otto
-                            </td>
-                            <td>
-                                @mdo
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                2
-                            </td>
-                            <td>
-                                Jacob
-                            </td>
-                            <td>
-                                Thornton
-                            </td>
-                            <td>
-                                @fat
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                3
-                            </td>
-                            <td>
-                                Larry
-                            </td>
-                            <td>
-                                the Bird
-                            </td>
-                            <td>
-                                @twitter
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="span6">
-                    <h4>Default Styles with Zebra-Striping</h4>
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>
-                                #
-                            </th>
-                            <th>
-                                First Name
-                            </th>
-                            <th>
-                                Last Name
-                            </th>
-                            <th>
-                                Username
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                1
-                            </td>
-                            <td>
-                                Mark
-                            </td>
-                            <td>
-                                Otto
-                            </td>
-                            <td>
-                                @mdo
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                2
-                            </td>
-                            <td>
-                                Jacob
-                            </td>
-                            <td>
-                                Thornton
-                            </td>
-                            <td>
-                                @fat
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                3
-                            </td>
-                            <td>
-                                Larry
-                            </td>
-                            <td>
-                                the Bird
-                            </td>
-                            <td>
-                                @twitter
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- divider -->
-            <div class="row">
-                <div class="span12">
-                    <div class="solidline">
-                    </div>
-                </div>
-            </div>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Date Created</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
 
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <tbody>
 
-        </div>
-    </section>
+            <?php
+            if (count($posts) > 0): ?>
 
+                <?php foreach ($posts as $post): ?>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand">CRUD With Bootstrap</a>
+                    <tr class="table-active">
+                        <th scope="row"><?php echo $post->title; ?></th>
+                        <td><?php echo $post->description; ?></td>
+                        <td><?php echo $post->date_created; ?></td>
+                        <td>
+                            <?php echo anchor("welcome/view/{$post->id}", 'VIEW', ['class' => 'badge badge-primary']); ?>
+                            <?php echo anchor("welcome/update/{$post->id}", 'UPDATE', ['class' => 'badge badge-success']); ?>
+                            <?php echo anchor("welcome/delete/{$post->id}", 'DELETE', ['class' => 'badge badge-danger']); ?>
 
-            </div>
+                        </td>
+                    </tr>
 
-        </div>
+                <?php endforeach; ?>
 
-    </nav>
+            <?php else: ?>
 
+                <tr>
+                    <td>No Records Found!!!!</td>
+                </tr>
 
+            <?php endif; ?>
 
-</head>
-<body>
+            </tbody>
+        </table>
+    </div>
 
-
-
-</body>
-</html>
+<?php include_once('footer.php'); ?>

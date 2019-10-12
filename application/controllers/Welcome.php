@@ -1,7 +1,13 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
+
+    public function __construct()
+    {
+        parent::__construct();
+
+
+    }
 
 	/**
 	 * Index Page for this controller.
@@ -18,8 +24,48 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->load->view('welcome_message');
+	public function index(){
+
+        $this->load->model('queries');
+	    $posts = $this-> queries ->getPosts();
+		$this->load->view('welcome_message', ['posts'=>$posts]);
 	}
+
+	public function create(){
+        $this->load->view('create');
+
+    }
+    public function save(){
+
+        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('description', 'Description', 'required',);
+
+
+        if ($this->form_validation->run())
+
+        {
+           $data = $this->input->post();
+           $today = date('Y-m-d');
+           $data['date_created'] = $today;
+           unset($data['submit']);
+           $this->load->model('queries');
+            if ($this->queries->addPost($data)){
+                $this->session->set_flashdata('msg', 'Post Uploaded Successfully');
+            }else{
+                $this->session->set_flash_data('msg', 'Post Not Saved..... Try Again');
+            }
+
+            return redirect('welcome');
+        }
+        else
+        {
+            $this->load->view('create');
+        }
+    }
+
+    public function update(){
+	    $this->load->view('update');
+    }
+
+
 }

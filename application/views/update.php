@@ -10,7 +10,8 @@
             <label class="col-md-2 control-label">Title</label>
             <div class="col-md-5">
 
-                <?php echo form_input(['name' => 'title', 'placeholder' => 'Title', 'class' => 'form-control']) ?>
+                <?php echo form_input(['name' => 'title', 'placeholder' => 'Title',
+                    'class' => 'form-control', 'value'=> set_value('title',$post->title)]); ?>
 
             </div>
 
@@ -28,7 +29,8 @@
 
             <div class="col-md-10">
 
-                <?php echo form_textarea(['name' => 'description', 'placeholder' => 'Description', 'class' => 'form-control']) ?>
+                <?php echo form_textarea(['name' => 'description', 'placeholder' => 'Description',
+                    'class' => 'form-control', 'value'=> set_value('description', $post->description )]) ?>
 
             </div>
 
@@ -41,8 +43,8 @@
         </div>
 
 
-        <?php echo form_submit(['name' => 'submit', 'class' => 'btn btn-primary', 'value' => 'Submit']); ?>
-        <?php echo anchor('welcome', 'Back', ['class' => 'btn btn-primary']); ?>
+        <?php echo form_submit(['name' => 'update', 'class' => 'btn btn-primary', 'value' => 'Update']); ?>
+        <?php echo anchor('welcome', 'Cancel', ['class' => 'btn btn-primary']); ?>
 
     </fieldset>
 

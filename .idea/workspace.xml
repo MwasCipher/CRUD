@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75779595-70d2-4e04-a654-5dd9562ca1b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/Queries.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/update.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ecom/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ecom/public/cart.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ecom/public/thank_you.php" afterDir="false" />
@@ -17,13 +10,10 @@
       <change afterPath="$PROJECT_DIR$/../ecom/resources/templates/back/header.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ecom/resources/templates/back/side_navigation.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ecom/resources/templates/back/top_navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/crud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crud.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/application/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/welcome_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/welcome_message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Queries.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Queries.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ecom/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecom/public/admin/add_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/../ecom/resources/templates/back/add_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ecom/public/admin/categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/../ecom/resources/templates/back/categories.php" afterDir="false" />
@@ -53,26 +43,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/update.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+            <state relative-caret-position="243">
+              <caret line="69" column="37" lean-forward="true" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/update.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+            <state relative-caret-position="105">
+              <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -80,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Queries.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+            <state relative-caret-position="360">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -136,10 +126,10 @@
         <option value="$PROJECT_DIR$/application/views/header.php" />
         <option value="$PROJECT_DIR$/application/views/footer.php" />
         <option value="$PROJECT_DIR$/application/views/create.php" />
+        <option value="$PROJECT_DIR$/application/views/welcome_message.php" />
         <option value="$PROJECT_DIR$/application/models/Queries.php" />
         <option value="$PROJECT_DIR$/application/controllers/Welcome.php" />
         <option value="$PROJECT_DIR$/application/views/update.php" />
-        <option value="$PROJECT_DIR$/application/views/welcome_message.php" />
       </list>
     </option>
   </component>
@@ -262,18 +252,18 @@
       <workItem from="1563779418355" duration="71000" />
       <workItem from="1563858602114" duration="22000" />
       <workItem from="1564129254204" duration="73000" />
-      <workItem from="1570851651338" duration="16595000" />
+      <workItem from="1570851651338" duration="20700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52058000" />
+    <option name="totallyTimeSpent" value="56163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20227273" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20227273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -380,13 +370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Queries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -394,24 +377,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/update.php">
+    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+        <state relative-caret-position="105">
+          <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Queries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        <state relative-caret-position="243">
+          <caret line="69" column="37" lean-forward="true" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
+    <entry file="file://$PROJECT_DIR$/application/views/update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        <state relative-caret-position="123">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
         </state>
       </provider>
     </entry>

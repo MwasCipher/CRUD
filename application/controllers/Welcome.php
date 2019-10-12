@@ -63,8 +63,11 @@ class Welcome extends CI_Controller {
         }
     }
 
-    public function update(){
-	    $this->load->view('update');
+    public function update($id){
+
+        $this->load->model('queries');
+        $post = $this-> queries ->getSinglePost($id);
+	    $this->load->view('update', ['post'=> $post]);
     }
 
 

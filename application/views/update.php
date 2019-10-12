@@ -1,7 +1,7 @@
 <?php include_once('header.php'); ?>
 <div class="container">
 
-    <?php echo form_open('welcome/change', ['class' => 'form_horizontal']); ?>
+    <?php echo form_open("welcome/change/{$post->id}", ['class' => 'form_horizontal']); ?>
 
     <fieldset>
         <legend>Create Post</legend>

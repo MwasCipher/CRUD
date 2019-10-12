@@ -38,7 +38,7 @@ class Welcome extends CI_Controller {
     public function save(){
 
         $this->form_validation->set_rules('title', 'Title', 'required');
-        $this->form_validation->set_rules('description', 'Description', 'required',);
+        $this->form_validation->set_rules('description', 'Description', 'required');
 
 
         if ($this->form_validation->run())
@@ -52,7 +52,7 @@ class Welcome extends CI_Controller {
             if ($this->queries->addPost($data)){
                 $this->session->set_flashdata('msg', 'Post Uploaded Successfully');
             }else{
-                $this->session->set_flash_data('msg', 'Post Not Saved..... Try Again');
+                $this->session->set_flashdata('msg', 'Post Not Saved..... Try Again');
             }
 
             return redirect('welcome');
@@ -68,6 +68,61 @@ class Welcome extends CI_Controller {
         $this->load->model('queries');
         $post = $this-> queries ->getSinglePost($id);
 	    $this->load->view('update', ['post'=> $post]);
+    }
+
+    public function change($id){
+
+
+        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('description', 'Description', 'required');
+
+
+        if ($this->form_validation->run())
+
+        {
+            $data = $this->input->post();
+            $today = date('Y-m-d');
+            $data['date_created'] = $today;
+            unset($data['submit']);
+
+            $this->load->model('queries');
+
+            if ($this->queries->updatePost($data, $id)){
+                $this->session->set_flashdata('msg', 'Post Updated Successfully');
+            }else{
+                $this->session->set_flashdata('msg', 'Post Not Changed.....');
+            }
+
+            return redirect('welcome');
+        }
+        else
+        {
+            $this->load->view('update');
+        }
+
+
+    }
+
+    public function view($id){
+
+        $this->load->model('queries');
+        $post = $this-> queries ->getSinglePost($id);
+        $this->load->view('view', ['post'=> $post]);
+    }
+
+    public function delete($id){
+
+        $this->load->model('queries');
+        if( $this-> queries ->deletePost($id) ){
+
+            $this->session->set_flashdata('msg', 'Post Deleted Successfully');
+
+        }else{
+            $this->session->set_flashdata('msg', 'Failed To Delete Post');
+        }
+
+        return redirect("welcome");
+
     }
 
 

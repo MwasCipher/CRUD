@@ -25,4 +25,15 @@ class Queries extends CI_Model {
             return $query-> row();
         }
     }
+
+    public function updatePost($data, $id){
+
+        return  $this->db->where('id', $id);
+                $this->db->update('posts', $data);
+
+    }
+
+    public function deletePost($id){
+        return $this->db->delete('posts', ['id'=>$id]);
+    }
 }
